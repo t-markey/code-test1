@@ -1,18 +1,18 @@
 ###	tasks
-1. pull repo
-2. get up and running
+1. DONEpull repo
+2. DONEget up and running
 ```
 $ export FLASK_APP=hello.py
 $ flask run
 ```
-3. fix 'The back-end contain several errors'
+3. DONEfix 'The back-end contain several errors'
 4. form for searching
 5. hit api test
 6. show results
 7. each result goes to dynamic info page
 8. user be able to save favorites
-9. link to page of favorites movies
-10. add bootstrap?
+9. DONElink to page of favorites movies
+10. STARTEDadd bootstrap?
 11. test running on phone
 12. edge case search results
 
