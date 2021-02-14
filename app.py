@@ -1,4 +1,4 @@
-from flask import Flask, escape, request, render_template
+from flask import Flask, escape, request, render_template, url_for, redirect
 import json
 import os
 
@@ -16,12 +16,13 @@ def favorites():
     filename = os.path.join('data.json')
     with open(filename) as data_file:
         data = json.load(data_file)
-        return data
+  
+    return redirect(url_for('savefavorites', data=data))
 
-@app.route('/savefavorites')
-def savefavorites():
+@app.route('/savefavorites/<data>')
+def savefavorites(data):
     """if query params are passed, write movie to json file."""
-    return render_template('favorites.html')
+    return render_template('favorites.html', data=data)
 
 @app.route('/search', methods=['POST'])
 def search():
