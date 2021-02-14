@@ -27,11 +27,11 @@ def savefavorites():
 def search():
     """if POST, query movie api for data and return results."""
     query = request.form['title']
-    return f('Hello, {query}!')
+    return f'Hello, {query}!'
 
 @app.route('/movie/<movie_oid>')
 def movie_detail():
     """if fetch data from movie database by oid and display info."""
     qs_name = request.args.get('name', '')
     qs_oid = request.args.get('oid', '')
-    return f('Hello, {escape(name)}')
+    return f'Hello, {escape(name)}'
