@@ -1,10 +1,22 @@
 from flask import Flask, escape, request, render_template, url_for, redirect
 import json
 import os
+from key import API_KEY
+import requests
+from pprint import PrettyPrinter
+pp = PrettyPrinter()
+apiKey = API_KEY
+
+
+
 
 
 
 app = Flask(__name__)
+
+
+
+
 
 @app.route('/')
 def index():
@@ -26,9 +38,18 @@ def savefavorites(data):
 
 @app.route('/search', methods=['POST'])
 def search():
-    """if POST, query movie api for data and return results."""
     query = request.form['title']
-    return f'Hello, {query}!'
+    data_URL ='http://www.omdbapi.com/?apikey='+API_KEY
+    year = ''
+    movieTitle = query
+    params = {
+    's':movieTitle,
+    'type':'movie',
+    'y':year    
+    }
+    response = requests.get(data_URL,params=params).json()
+    pp.pprint(response)
+    return (f'Your Movie Result: {response}')
 
 @app.route('/movie/<movie_oid>')
 def movie_detail():
