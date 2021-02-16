@@ -6,8 +6,8 @@ $ export FLASK_APP=hello.py
 $ flask run
 ```
 3. DONEfix 'The back-end contain several errors'
-4. form for searching
-5. hit api test
+4. DONEform for searching
+5. DONEhit api test
 6. show results
 7. each result goes to dynamic info page
 8. user be able to save favorites
@@ -15,6 +15,8 @@ $ flask run
 10. STARTEDadd bootstrap?
 11. test running on phone
 12. edge case search results
+13. Make carousel with posters
+
 
 
 
