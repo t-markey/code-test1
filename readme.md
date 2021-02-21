@@ -16,6 +16,7 @@ $ flask run
 11. test running on phone
 12. edge case search results
 13. Make carousel with posters
+14. Have carousel be 3 random posters
 
 
 
